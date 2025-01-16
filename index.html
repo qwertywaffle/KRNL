@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>KRNL - Remade</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            position: relative; /* Set relative position for background */
+        }
+
+        /* Background image with dark overlay using ::before */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('back.png') no-repeat center center fixed;
+            background-size: cover;
+            filter: brightness(50%); /* Darkens the background image */
+            z-index: -1; /* Places it behind content */
+        }
+
+        /* Define fade-in animation */
+        html, body {
+            opacity: 0; /* Start hidden */
+            animation: fadeIn 2s forwards; /* Fade-in effect */
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .content {
+            flex: 1; /* Allows it to take up available space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .button {
+            background-color: #a011ff; /* Neon purple */
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 10px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #6522bd; /* Darker neon purple */
+            color: white; /* Ensure text stays white */
+        }
+
+        .additional-content {
+            padding: 20px;
+            box-sizing: border-box;
+            width: 100%; /* Ensures full width */
+            min-height: 30vh; /* Makes it take up at least 30% of the viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .additional-content h2 {
+            font-size: 2em;
+            color: #a011ff; /* Neon purple heading */
+        }
+
+        .additional-content p {
+            font-size: 1.2em;
+            color: #fff;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Content Section -->
+    <div class="content">
+        <h1>KRNL - Remade</h1>
+        <p>Your favorite software is back, and it's fixed!</p>
+        <div>
+            <a href="" class="button">Download KRNL</a>
+            <a href="https://discord.gg/zr5uDU7kYa" class="button">Join Discord</a>
+        </div>
+    </div>
+
+    <!-- Additional Content Section -->
+    <div class="additional-content">
+        <h2>About KRNL</h2>
+        <p>KRNL was a pretty good Roblox executor, but now remade and fully functional after a period of downtime. With new updates and enhanced features, it's better than ever before.</p>
+        
+        <h2>Features</h2>
+        <p>KRNL now supports Roblox in 2025, making it one of the first actual working KRNL remakes.</p>
+        
+        <h2>Get Involved</h2>
+        <p>Join our community of users on Discord. Share ideas, ask for support, and keep up with the latest news and updates!</p>
+    </div>
+</body>
+</html>
