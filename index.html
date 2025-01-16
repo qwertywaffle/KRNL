@@ -14,11 +14,9 @@
             flex-direction: column;
             color: #fff;
             font-family: Arial, sans-serif;
-            position: relative; /* Set relative position for background */
-            background-color: #000; /* Ensures the page background is black until the fade-in starts */
+            position: relative;
+            background-color: #000;
         }
-
-        /* Background image with dark overlay using ::before */
         body::before {
             content: "";
             position: absolute;
@@ -28,14 +26,12 @@
             height: 100%;
             background: url('back.png') no-repeat center center fixed;
             background-size: cover;
-            filter: brightness(50%); /* Darkens the background image */
-            z-index: -1; /* Places it behind content */
+            filter: brightness(35%);
+            z-index: -1;
         }
-
-        /* Define fade-in animation */
         html, body {
-            opacity: 0; /* Start hidden */
-            animation: fadeIn 2s forwards; /* Fade-in effect */
+            opacity: 0;
+            animation: fadeIn 2s forwards;
         }
 
         @keyframes fadeIn {
@@ -48,7 +44,7 @@
         }
 
         .content {
-            flex: 1; /* Allows it to take up available space */
+            flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -68,7 +64,7 @@
         }
 
         .button {
-            background-color: #a011ff; /* Neon purple */
+            background-color: #a011ff;
             color: white;
             padding: 15px 25px;
             border: none;
@@ -81,15 +77,15 @@
         }
 
         .button:hover {
-            background-color: #6522bd; /* Darker neon purple */
-            color: white; /* Ensure text stays white */
+            background-color: #6522bd;
+            color: white;
         }
 
         .additional-content {
             padding: 20px;
             box-sizing: border-box;
-            width: 100%; /* Ensures full width */
-            min-height: 30vh; /* Makes it take up at least 30% of the viewport height */
+            width: 100%;
+            min-height: 30vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -97,7 +93,7 @@
 
         .additional-content h2 {
             font-size: 2em;
-            color: #a011ff; /* Neon purple heading */
+            color: #a011ff;
         }
 
         .additional-content p {
@@ -108,17 +104,15 @@
     </style>
 </head>
 <body>
-    <!-- Main Content Section -->
     <div class="content">
         <h1>KRNL - Remade</h1>
         <p>Your favorite software is back, and it's fixed!</p>
         <div>
-            <a href="https://raw.githubusercontent.com/qwertywaffle/KRNL/refs/heads/main/hey.bruh" class="button">Download KRNL</a>
+            <a href="" class="button">Download KRNL</a>
             <a href="https://discord.gg/zr5uDU7kYa" class="button">Join Discord</a>
         </div>
     </div>
 
-    <!-- Additional Content Section -->
     <div class="additional-content">
         <h2>About KRNL</h2>
         <p>KRNL was a pretty good Roblox executor, but now remade and fully functional after a period of downtime. With new updates and enhanced features, it's better than ever before.</p>
